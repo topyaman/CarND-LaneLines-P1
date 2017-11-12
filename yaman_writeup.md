@@ -41,14 +41,11 @@ If you'd like to include images to show how the pipeline works, here is how to i
 
 ### 2. Identify potential shortcomings with your current pipeline
 
+There are several shorcomings of the current pipeline. First, because all historical slope and y-axis intercept data is included when interpolating the full line, the pipeline will take to produce a line that properly convergers to the actual line in the image in the event of a sudden change in the orientation of the lane(such as a bend or corner turn)
 
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
+Also, the parameters have been turned to the type of lane markings found in this video, but if the lane markings where to change, it could have significant implications on the accuracy of the pipeline.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+An imporvement would be to only consider the slope and y-axis data from lines detected in the current frame when attempting to interpolate a line of the full line of interest. This was attempted and while results did trend well, it did however cause jitter in the line that was in some instances very significant due to the lack of historical information that would help the algorithm determine where the line may have been in previous frames. Bounding the limits of the average slope and y-axis could alieat this but severly restrict the operating window the pipeline.
