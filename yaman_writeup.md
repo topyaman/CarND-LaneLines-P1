@@ -32,7 +32,7 @@ Using the equation of a line: y = mx + b where:
           y = the min and max of the y-axis regions of interest, in this case 315 and 540.
  
 The x intercept for our interpoloated line was computed. This process was repeated for both the left and right lines.
-
+[image1]
 
 ### 2. Identify potential shortcomings with your current pipeline
 
