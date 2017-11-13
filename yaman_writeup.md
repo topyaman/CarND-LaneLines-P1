@@ -18,8 +18,13 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My pipeline consisted of several steps:
 
+          Grayscaling the frame
+          Reducing the noise in the grayscaled frame
+          Determining the edges within the frame
+          Drawing the lines of the lane using the information provided by the detected edges
+          
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by first capturing the relevant data for the right and left hand lines. This was done by determining whether the detected line had a positive or negative slope. Remember that the y-axis is inverted, so lines with positive slopes are actually the right hand line, and lines with negative slopes are the left hand line. 
 
 The slope and y-axis intercept of each line was then calculated and stored in one of four different arrays(left/right slope, left/right intercept). This could have been reduced to two, two axis arrays but for the sake of clarity and simplicity four arrays were used.
