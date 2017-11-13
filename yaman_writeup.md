@@ -35,6 +35,17 @@ Using the equation of a line: y = mx + b where:
           m = average of all left/right line slopes
           b = average of all left/right line y-axis intercepts
           y = the min and max of the y-axis regions of interest, in this case 315 and 540.
+          
+          
+              #compute the right line x-coordinate using the average slope and average intercept of the right lines detected 
+              x1r = int(((y1 - np.mean(full_right_line_intercept_array))/(np.mean(full_right_line_slope_array))))
+              x2r = int(((y2 - np.mean(full_right_line_intercept_array))/(np.mean(full_right_line_slope_array))))
+              cv2.line(img, (x1r, y1), (x2r,y2), color, thickness)
+        
+              #compute the left line x-coordinate using the average slope and average intercept of the left lines detected
+              x1L = int(((y1 - np.mean(full_left_line_intercept_array))/(np.mean(full_left_line_slope_array))))
+              x2L = int(((y2 - np.mean(full_left_line_intercept_array))/(np.mean(full_left_line_slope_array))))
+              cv2.line(img, (x1L,y1), (x2L,y2), color, thickness)  
  
 The x intercept for our interpoloated line was computed. This process was repeated for both the left and right lines.
 
