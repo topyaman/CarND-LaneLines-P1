@@ -27,6 +27,11 @@ My pipeline consisted of several steps:
           Determining the edges within the frame
           Drawing the lines of the lane using the information provided by the detected edges
           
+Pipeline source code can be found here:
+
+https://github.com/topyaman/CarND-LaneLines-P1/blob/master/yaman_awad_P1-Final.ipynb
+
+          
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by first capturing the relevant data for the right and left hand lines. This was done by determining whether the detected line had a positive or negative slope. Remember that the y-axis is inverted, so lines with positive slopes are actually the right hand line, and lines with negative slopes are the left hand line. 
 
 The slope and y-axis intercept of each line was then calculated and stored in one of four different arrays(left/right slope, left/right intercept). This could have been reduced to two, two axis arrays but for the sake of clarity and simplicity four arrays were used.
