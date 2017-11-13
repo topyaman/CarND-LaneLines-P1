@@ -11,7 +11,9 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./images/SolidWhiteRight1.jpg
+
 [image2]: ./images/SolidYellowLeft5.jpg
+
 ---
 
 ### Reflection
@@ -50,6 +52,7 @@ Using the equation of a line: y = mx + b where:
 The x intercept for our interpoloated line was computed. This process was repeated for both the left and right lines.
 
 ![image1]:
+
 
 ![image2]:
 
