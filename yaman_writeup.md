@@ -34,11 +34,6 @@ Using the equation of a line: y = mx + b where:
 The x intercept for our interpoloated line was computed. This process was repeated for both the left and right lines.
 
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
-
-
 ### 2. Identify potential shortcomings with your current pipeline
 
 There are several shorcomings of the current pipeline. First, because all historical slope and y-axis intercept data is included when interpolating the full line, the pipeline will take to produce a line that properly convergers to the actual line in the image in the event of a sudden change in the orientation of the lane(such as a bend or corner turn)
